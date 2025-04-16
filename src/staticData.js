@@ -2,10 +2,12 @@ import image1 from "../src/assets/image1.png";
 import iphone from "../src/assets/iphone.jpg";
 import samsung from "../src/assets/samsung.jpg";
 import redmi from "../src/assets/redmi.jpg";
+
 const data = [
   {
     name: "Apple iPhone 15 Pro",
-    image: iphone,
+    image:['https://www.apple.com/v/iphone-16-pro/f/images/overview/product-viewer/iphone-pro/all_colors__fdpduog7urm2_large_2x.jpg','https://www.apple.com/v/iphone-16-pro/f/images/overview/product-viewer/iphone-pro/desert_titanium__gcg1i94xakuq_large_2x.jpg', 'https://www.apple.com/v/iphone-16-pro/f/images/overview/product-viewer/iphone-pro/natural_titanium__22ovjg0i0huy_large_2x.jpg']
+    ,
     id: 1,
     price: "999",
     description:
@@ -23,7 +25,11 @@ const data = [
   },
   {
     name: "Samsung Galaxy S24 Ultra",
-    image: samsung,
+    image: [
+      "https://images.samsung.com/in/smartphones/galaxy-s24-ultra/images/galaxy-s24-ultra-highlights-color-carousel-exclusive.jpg?imbypass=true",
+      "https://images.samsung.com/is/image/samsung/assets/in/smartphones/galaxy-s24-ultra/1920x920.jpg?imbypass=true",
+      "https://7news1.com/wp-content/uploads/2024/01/59-3.webp",
+    ],
     id: 2,
     price: "1199",
     description:
@@ -41,7 +47,11 @@ const data = [
   },
   {
     name: "Google Pixel 8 Pro",
-    image: image1,
+    image: [
+      "https://images.expertreviews.co.uk/wp-content/uploads/2023/11/Google_Pixel_8_Pro_7-3.jpg",
+      "https://www.androidauthority.com/wp-content/uploads/2023/10/google-pixel-8-pro-vs-pixel-6-pro-side-by-side.jpg",
+      "https://www.androidauthority.com/wp-content/uploads/2023/10/google-pixel-8-pro-color-options-1000w-563h.jpg",
+    ],
     id: 3,
     price: "899",
     description:
@@ -57,42 +67,5 @@ const data = [
     tags: ["AI", "Android", "camera", "premium"],
     category: "Smartphones",
   },
-  {
-    name: "OnePlus 12",
-    image: image1,
-    id: 4,
-    price: "749",
-    description:
-      "The OnePlus 12 delivers exceptional performance with its Snapdragon 8 Gen 3 chipset and a Fluid AMOLED display. It’s designed to offer a fast and smooth user experience.",
-    features: [
-      "Snapdragon 8 Gen 3 processor",
-      "6.7-inch Fluid AMOLED display",
-      "50MP triple camera system",
-      "120Hz refresh rate",
-      "Fast charging with 100W Warp Charge",
-    ],
-    colors: ["eternal green", "volcanic gray", "glacial blue"],
-    tags: ["performance", "fast charging", "120Hz", "camera"],
-    category: "Smartphones",
-  },
-  {
-    name: "Xiaomi Mi 13 Pro",
-    image: redmi,
-    id: 5,
-    price: "849",
-    description:
-      "The Xiaomi Mi 13 Pro combines powerful hardware with a premium design. It features a high-resolution display and a versatile camera setup for capturing stunning photos and videos.",
-    features: [
-      "Snapdragon 8 Gen 2 processor",
-      "6.73-inch AMOLED display with 120Hz refresh rate",
-      "50MP triple camera system with Leica optics",
-      "5000mAh battery with 120W fast charging",
-      "MIUI 14 based on Android 13",
-    ],
-    colors: ["black", "white", "green"],
-    tags: ["camera", "high-resolution", "fast charging", "premium"],
-    category: "Smartphones",
-  },
 ];
-
-export default data;
+export default data

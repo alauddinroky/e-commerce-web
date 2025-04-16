@@ -21,13 +21,13 @@ function Cards({ filteredData }) {
       >
         {/* Product Card 1 */}
         {filteredData.map((item, index) => (
-          <div
+          <div 
             key={index}
             className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
           >
             {/* <a href="#"> */}
             <img
-              src={item.image}
+              src={item.image[0]}
               alt="Product"
               className="h-80 w-72 object-cover rounded-t-xl"
             />

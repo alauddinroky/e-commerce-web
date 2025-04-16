@@ -31,7 +31,6 @@ const itemReducer = createSlice({
     addToCart: (state, action) => {
       try {
         const exist = state.cart.some((item) => item.id === action.payload.id);
-        console.log(exist);
         if (!exist) {
           state.cart = [...state.cart, action.payload];
           saveDataToLocalStorage(state.cart);

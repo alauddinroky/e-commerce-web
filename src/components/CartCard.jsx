@@ -10,7 +10,10 @@ function CartCard({ data, removeCart, originalPrice }) {
       return acc;
     }, {})
   );
-
+const extra = {
+  tax: 12,
+  shipping: 50
+}
   const handleDecrement = (id) => {
     setQuantities((prevQuantities) => {
       const newQuantity = Math.max(prevQuantities[id] - 1, 1);
@@ -492,7 +495,7 @@ function CartCard({ data, removeCart, originalPrice }) {
                       Store Pickup
                     </dt>
                     <dd className="text-base font-medium text-gray-900 dark:text-white">
-                      $50
+                      ${Math.floor(calculateTotalPrice()) > 0? `${(calculateTotalPrice()*extra.tax/100).toFixed(2)}`: '$0'}
                     </dd>
                   </dl>
 
@@ -501,7 +504,7 @@ function CartCard({ data, removeCart, originalPrice }) {
                       Tax
                     </dt>
                     <dd className="text-base font-medium text-gray-900 dark:text-white">
-                      $50
+                    ${Math.floor(calculateTotalPrice()) > 0? `${extra.shipping}`: '$0'}
                     </dd>
                   </dl>
                 </div>
@@ -513,10 +516,8 @@ function CartCard({ data, removeCart, originalPrice }) {
                   <dd className="text-base font-bold text-gray-900 dark:text-white">
                     $
                     {(
-                      calculateTotalPrice() -
-                      Math.floor(calculateTotalPrice() * 0.2) + // Savings
-                      99 + // Store Pickup
-                      50
+                      (calculateTotalPrice() -
+                      Math.floor(calculateTotalPrice() * 0.2)) + (calculateTotalPrice()> 0?calculateTotalPrice() * extra.tax/100 + extra.shipping: 0)
                     ) // Tax
                       .toFixed(2)}
                   </dd>
