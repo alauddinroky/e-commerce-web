@@ -35,7 +35,7 @@ function Cards({ filteredData }) {
                 {item.category}
               </span>
               <Link
-                to={`product/${item.id}`}
+                to={`/product/${item.id}`}
                 className="text-lg font-bold text-black truncate block capitalize"
               >
                 {item.name}
