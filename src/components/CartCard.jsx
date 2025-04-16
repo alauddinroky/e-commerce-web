@@ -56,7 +56,7 @@ const extra = {
                         <Link href="#" className="shrink-0 md:order-1">
                           <img
                             className="h-20 w-20 object-cover"
-                            src={item.image}
+                            src={item.image[0]}
                             alt={item.name}
                           />
                         </Link>

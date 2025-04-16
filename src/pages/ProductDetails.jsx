@@ -161,7 +161,7 @@ const ProductDetails = () => {
           <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
             People also bought
           </h3>
-          <div className="mt-6 grid grid-cols-3 gap-4 sm:mt-8">
+          <div className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-4 sm:mt-8">
             {topRecommended.map((item, index) => (
               <div
                 className="space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800"
@@ -170,7 +170,7 @@ const ProductDetails = () => {
                 <a href="#" className="overflow-hidden rounded">
                   <img
                     className="mx-auto h-44 w-44 object-cover"
-                    src={item.image}
+                    src={item.image[0]}
                     alt="imac image"
                   />
                 </a>
@@ -194,7 +194,7 @@ const ProductDetails = () => {
                     ${item.price}
                   </p>
                 </div>
-                <div className="mt-6 flex items-center gap-2.5">
+                <div className="mt-6 flex sm:flex-row flex-col items-center gap-2.5">
                   <button
                     data-tooltip-target="favourites-tooltip-1"
                     type="button"
@@ -226,6 +226,7 @@ const ProductDetails = () => {
                   </div>
                   <button
                     type="button"
+                    onClick={()=> dispatch(addToCart(item))}
                     className="inline-flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium  text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                   >
                     <svg

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Cards from "./Cards";
+import { useSelector } from "react-redux";
 
-const DataFilterComponent = ({ data }) => {
+const DataFilterComponent = () => {
+  const data = useSelector((state)=> state.item.items)
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -49,7 +51,7 @@ const DataFilterComponent = ({ data }) => {
   const categories = [...new Set(data.map((item) => item.category))];
 
   return (
-    <div className=" p-4">
+    <div className=" p-4" id="collections">
       {/* <div className="flex items-center justify-center p-4"> */}
       <div className="mb-4">
         <input

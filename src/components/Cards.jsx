@@ -9,15 +9,14 @@ function Cards({ filteredData }) {
       {/* Header Section */}
       <div className="text-center p-10">
         <h1 className="font-bold text-4xl mb-4">
-          Responsive Product card grid
+          Products For You
         </h1>
-        {/* <h1 className="text-3xl">Tailwind CSS</h1> */}
       </div>
 
       {/* Grid Section */}
       <section
         id="Projects"
-        className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5"
+        className="w-fit mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5"
       >
         {/* Product Card 1 */}
         {filteredData.map((item, index) => (

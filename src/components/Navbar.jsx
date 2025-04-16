@@ -8,7 +8,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const menu_list = [
     { name: 'Home', link: '/' },
-    { name: 'Collections', link: '/collections' },
+    { name: 'Collections', link: '' },
     { name: 'Products', link: '/products' },
   ];
 
@@ -17,9 +17,9 @@ function Navbar() {
       <header className="sticky top-0 bg-white shadow-md px-8 py-2">
         <div className={`flex items-center justify-between`}>
           {/* Logo */}
-          <h1 className="w-3/12">
+          <h1 className="w-6/12">
             <Link to="/">
-              <img src={logo} alt="Logo" width="150px" />
+              <img src={logo} alt="Logo" width="190px" />
             </Link>
           </h1>
 
